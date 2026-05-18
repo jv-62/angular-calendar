@@ -1,10 +1,13 @@
 {
   "name": "angular-calendar",
   "version": "0.0.0",
+  "homepage": "https://jv-62.github.io/angular-calendar/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "predeploy": "npm run build -- --base-href /angular-calendar/",
+    "deploy": "npx gh-pages -d dist/angular-calendar",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -29,6 +32,7 @@
     "@angular/compiler-cli": "^17.3.0",
     "@types/jasmine": "~5.1.0",
     "@types/luxon": "^3.4.2",
+    "gh-pages": "^6.3.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

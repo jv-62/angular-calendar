@@ -7,12 +7,18 @@ import {CalendarComponent} from './calendar/calendar.component';
   standalone: true,
   imports: [RouterOutlet, CalendarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'angular-calendar';
+
+  private todayIso = new Date().toISOString().slice(0, 10);
+  private tomorrowIso = new Date(Date.now() + 24 * 60 * 60 * 1000)
+    .toISOString()
+    .slice(0, 10);
+
   meetings = {
-    '2024-04-05': ['Dring Coffee', 'Learn React', 'Sleep'],
-    '2024-04-06': ['Dring Coffee', 'Learn Angular', 'Sleep'],
+    [this.todayIso]: ['Drink Coffee', 'Learn React', 'Sleep'],
+    [this.tomorrowIso]: ['Drink Coffee', 'Learn Angular', 'Sleep'],
   };
 }
