@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "predeploy": "npm run build -- --base-href /angular-calendar/",
+    "predeploy": "npm run build -- --configuration production --base-href /angular-calendar/",
     "deploy": "npx gh-pages -d dist/angular-calendar",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
